@@ -51,22 +51,21 @@ Since the record is empty, the total sum is 0.
 
 function calPoints(operations){
     let sumArr = [];
-    let resultArr = [];
     let sum = 0;
 
     for(let i = 0; i < operations.length; i++){
         if(operations[i] == "C"){
-            resultArr.pop();
+            sumArr.pop();
         } else if(operations[i] == "+"){
-            resultArr.push(Number(resultArr[resultArr.length - 1] || 0) + Number(resultArr[resultArr.length - 2] || 0));
+            sumArr.push(Number(sumArr[sumArr.length - 1] || 0) + Number(sumArr[sumArr.length - 2] || 0));
         } else if(operations[i] == "D"){
-            resultArr.push(resultArr[resultArr.length - 1] * 2);
-        } else if((!isNaN(operations[i])) && typeof(Number(operations[i])) == 'number'){
-            resultArr.push(operations[i]);
+            sumArr.push(sumArr[sumArr.length - 1] * 2);
+        // } else if((!isNaN(operations[i])) && typeof(Number(operations[i])) == 'number'){
+        } else if(operations[i] !== "C" && operations[i] !== "D" && operations[i] !== "+"){
+            sumArr.push(Number(operations[i]));
         }
     }
-    for(let j = 0; j < resultArr.length; j++){
-        sumArr.push(Number(resultArr[j]));
+    for(let j = 0; j < sumArr.length; j++){
         sum += sumArr[j];
     }
     return sum;
