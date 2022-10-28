@@ -21,8 +21,7 @@ Explanation: 10 is "1010" in binary, with complement "0101" in binary, which is 
 */
 
 function bitwiseComplement(n){
-    n = n.toString(2);
-    n = n.split("");
+    n = n.toString(2).split("");
     for(let i = 0; i < n.length; i++){
         if(n[i] == 1){
             n[i] = 0;
@@ -30,9 +29,7 @@ function bitwiseComplement(n){
             n[i] = 1;
         }
     }
-    n = n.join("");
-    let output = parseInt(n, 2);
-    return output;
+    return parseInt(n.join(""), 2);
 }
 
 let n1 = 5;
