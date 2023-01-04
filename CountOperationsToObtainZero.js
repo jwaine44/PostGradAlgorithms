@@ -35,9 +35,6 @@ function countOperations(num1, num2){
             num2 -= num1;
             count++;
         }
-        if(num1 == 0 || num2 == 0){
-            break;
-        }
     }
     return count;
 }
