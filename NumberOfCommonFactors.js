@@ -16,17 +16,9 @@ Explanation: The common factors of 25 and 30 are 1, 5.
 
 function commonFactors(a, b){
     let count = 0;
-    if(a > b){
-        for(let i = 1; i <= a; i++){
-            if(a % i == 0 && b % i == 0){
-                count++;
-            }
-        }
-    } else {
-        for(let j = 1; j <= b; j++){
-            if(a % j == 0 && b % j == 0){
-                count++;
-            }
+    for(let i = 1; i <= Math.min(a, b); i++){
+        if(a % i == 0 && b % i == 0){
+            count++;
         }
     }
     return count;
