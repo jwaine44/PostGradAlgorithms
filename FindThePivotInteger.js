@@ -21,9 +21,6 @@ Explanation: It can be proved that no such integer exist.
 */
 
 function pivotInteger(n){
-    if(n == 1){
-        return 1;
-    }
     let start = 0;
     let end = (n * (n + 1)) / 2;
     for(let j = 1; j <= n; j++){
