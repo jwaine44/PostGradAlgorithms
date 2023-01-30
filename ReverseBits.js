@@ -23,13 +23,5 @@ function reverseBits(n){
     return parseInt(newNum, 2);
 }
 
-let n = "00000010100101000001111010011100";
-let test = parseInt(n, 2);
-console.log(test);
-let test2 = n.split("").reverse();
-let test3 = test2.join("");
-console.log(test2);
-console.log(test3);
-
 console.log(reverseBits(00000010100101000001111010011100));
 console.log(reverseBits(11111111111111111111111111111101));
