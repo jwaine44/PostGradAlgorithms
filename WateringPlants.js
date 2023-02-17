@@ -44,9 +44,8 @@ function wateringPlants(plants, capacity){
     let fullBucket = capacity;
     for(let i = 0; i < plants.length; i++){
         if(capacity < plants[i]){
-            steps += i;
+            steps += i * 2;
             capacity = fullBucket;
-            steps += i;
         }
         steps++;
         capacity -= plants[i];
