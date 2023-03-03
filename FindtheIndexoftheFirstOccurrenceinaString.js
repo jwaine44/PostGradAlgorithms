@@ -28,6 +28,7 @@ function strStr(haystack, needle){
         }
     }
     return -1;
+    // return haystack.indexOf(needle);
 }
 
 let h1 = "sadbutsad";
