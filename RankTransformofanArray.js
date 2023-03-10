@@ -23,16 +23,11 @@ Output: [5,3,4,2,8,6,7,1,3]
 */
 
 function arrayRankTransform(arr){
-    let sortedArr = [...arr].sort((a, b) => a - b);
-    let set = new Set([...sortedArr]);
+    let set = new Set([...arr].sort((a, b) => a - b));
     set = Array.from(set);
     let output = [];
     for(let i = 0; i < arr.length; i++){
-        if(sortedArr[i] != sortedArr[i + 1]){
-            output.push(set.indexOf(arr[i]) + 1);
-        } else {
-            output.push(set.indexOf(arr[i]) + 1);
-        }
+        output.push(set.indexOf(arr[i]) + 1);
     }
     return output;
 }
