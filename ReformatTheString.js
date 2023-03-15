@@ -36,7 +36,7 @@ function reformat(s){
             numbers.push(s[i]);
         }
     }
-    if(letters.length == 0 || numbers.length == 0){
+    if(Math.abs(letters.length - numbers.length) > 1){
         return "";
     } else {
         if(letters.length > numbers.length){
@@ -59,11 +59,7 @@ function reformat(s){
             }
         }
     }
-    if(output.charCodeAt(output.length - 1) >= 97 && output.charCodeAt(output.length - 1) <= 122 && output.charCodeAt(output.length - 2) >= 97 && output.charCodeAt(output.length - 2) <= 122 || numbers.includes(output.length - 1) && numbers.includes(output.length - 2)){
-        return "";
-    } else {
-        return output;
-    }
+    return output;
 }
 
 let s1 = "a0b1c2";
