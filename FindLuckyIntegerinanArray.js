@@ -30,9 +30,8 @@ function findLucky(arr){
             matches.push(key);
         }
     }
-    matches = matches.sort((a, b) => a - b);
     if(matches.length > 1){
-        return matches[matches.length - 1];
+        return Math.max(...matches);
     } else if(matches.length == 1){
         return matches[0];
     } else if(matches.length == 0){
