@@ -26,7 +26,7 @@ function uniqueOccurrences(arr){
             return false;
         }
     }
-    return vals;
+    return true;
 }
 
 let arr1 = [1,2,2,1,1,3];
