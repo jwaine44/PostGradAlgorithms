@@ -20,17 +20,13 @@ function uniqueOccurrences(arr){
     for(let i = 0; i < arr.length; i++){
         map.set(arr[i], (map.get(arr[i]) ?? 0) + 1);
     }
-    let vals = [];
-    for(let val of map.values()){
-        vals.push(val);
-    }
-    vals = vals.sort((a, b) => a - b);
+    let vals = Array.from(map.values()).sort((a, b) => a - b);
     for(let k = 0; k < vals.length; k++){
         if(vals[k] == vals[k + 1]){
             return false;
         }
     }
-    return true;
+    return vals;
 }
 
 let arr1 = [1,2,2,1,1,3];
